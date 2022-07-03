@@ -19,5 +19,6 @@
     </properties>
     <modules>
         <module>webflux-tutorial</module>
+        <module>annotation-based</module>
     </modules>
 </project>
