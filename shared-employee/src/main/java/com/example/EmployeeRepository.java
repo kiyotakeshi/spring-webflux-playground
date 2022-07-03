@@ -26,4 +26,12 @@ public class EmployeeRepository {
     public Flux<Employee> findAllEmployees() {
         return Flux.fromIterable(EMPLOYEE_MAP.values());
     }
+
+    public Mono<Employee> updateEmployee(Employee employee) {
+        Employee founded = EMPLOYEE_MAP.get(employee.getId());
+        if(founded != null){
+            founded.setName(employee.getName());
+        }
+        return Mono.just(founded);
+    }
 }
